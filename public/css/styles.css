@@ -1,0 +1,377 @@
+:root {
+
+    /*Colors*/
+    --main-yellow: #eac923;
+    --main-blue: #03264c;
+    --main-green: #39b54a;
+    --main-black: #1c1c1c;
+    --main-dark-gray: #666;
+    --main-light-blue: #1259c3;
+    --main-light-gray: #ebebeb;
+  
+    /*Font-Sizes*/
+    --main-body-text: 12px;
+    --main-titles: 24px;
+    --main-prices: 18px;
+    --main-discounts: 16px;
+    --main-descriptions: 16px;
+  }
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+main section article img{
+    width: 100%;
+}
+
+
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    background-color: #ebebeb;
+    min-width: 360px;
+}
+
+
+header{
+    background-color: #fff159;
+    color: rgb(40, 40, 40);
+    
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    color: rgb(40, 40, 40);
+    text-decoration: none;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+.up-section{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.up-section__img{
+    width: 50%;
+    padding-right: 10px;
+}
+.up-section__img img{
+    width: 154px;
+}
+
+.up-section__search{
+    display: flex;
+    width: 50%;
+}
+
+.up-section__search input {
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.up-section__search button::before{
+    content: '';
+    display: block;
+    height: 26px;
+    border-left: 1px solid #e6e6e6;
+}
+.up-section__search button {
+    align-items: center;
+    background-color: white;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: darkgray;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 50px;
+}
+
+.up-section__text{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.down-section nav{
+    display: none;
+    color: #666;
+}
+
+.hamburguer-menu i{
+    border-radius: 5px;
+    color: white;
+    background-color: #0044AA;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.hamburguer-menu {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.banner img{
+    max-width: 100%;
+}
+
+main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main section article{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.last-visit h2, .offers h2{
+    color: #666;
+    font-size: 26px;
+}
+
+main section h2{
+    margin: 30px 0px;
+}
+
+.products-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product{
+    background-color: #fff;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.product__info {
+    border-top: 1px solid rgba(51,51,51,.1);
+    color: rgb(51, 51, 51);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 16px;
+    position: relative;
+}
+
+.product__info i,
+.discount{
+    color: #39b54a;
+}
+
+.product__info i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.product__info > h3 {
+    color: #666;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.discount{
+    font-size: 14px;
+    width: 60%;
+}
+
+.price {
+    width: 40%;
+}
+
+footer {
+    background-color: #fff;
+}
+
+.footer-section{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+  .footer-item {
+    color: var(--main-dark-gray);
+    padding: 35px 45px 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer-item > i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--main-light-blue)
+  }
+  .footer-item > article > h2 {
+    font-size: var(--main-descriptions);
+  }
+  
+  .footer-item > article > p {
+    font-size: var(--main-body-text)
+  }
+  
+  .footer-copyright > p {
+    font-size: var(--main-body-text);
+    color: var(--main-dark-gray);
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 90%;
+  }
+
+@media (min-width: 576px) {
+
+  }
+
+@media (min-width: 768px) { 
+    .up-section__img{
+        width: 33%;
+    }
+    .up-section__search{
+        width: 33%;
+    }
+    .up-section__text{
+        text-align: left;
+        width: 33%;
+    }
+    .down-section{
+        padding: 20px 5px 10px;
+    }
+    .down-section nav{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .down-section nav ul{
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        font-size: 14px;
+    }
+    .hamburguer-menu{
+        display: none;
+    }
+    .product{
+        margin-right: 8px;
+        margin-bottom: 15px;
+        width: 47%;
+    }
+    .footer-item {
+        width: 33%;
+      }
+
+    /* .footer-item i{
+        display: block;
+        text-align: center;
+    } */
+    .footer-item h2{
+        margin-bottom: 30px;    
+    }
+    .footer-item p{
+        font-size: 14px;   
+    }
+ }
+
+@media (min-width: 992px) { 
+    .up-section__text{
+        text-align: center;
+    }
+    .product{
+        margin-right: 8px;
+        width: 23%;
+    }
+ }
+
+@media (min-width: 1200px) { 
+ }
+
+@media (min-width: 1400px) { 
+
+ }
