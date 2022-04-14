@@ -1,7 +1,7 @@
 :root {
 
     /*Colors*/
-    --main-yellow: #eac923;
+    --main-yellow: #fff159;
     --main-blue: #03264c;
     --main-green: #39b54a;
     --main-black: #1c1c1c;
@@ -17,62 +17,6 @@
     --main-descriptions: 16px;
   }
 
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
-
-div.burger-menu{
-    text-align: center;
-}
-
-main section article img{
-    width: 100%;
-}
-
-
-
-article div.main-article{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 15px;
-}
-
-@media (min-width: 361px){
-    main section article .description{
-        display: block;
-    }
-
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    
-    main section div.products article{
-        width: 45%;
-    }
-
-    .price,
-    .discount{
-        width: 50%;
-    }
-}
-
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
-    }
-}
-
 /* // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
 
@@ -84,13 +28,13 @@ article div.main-article{
 
 body{
     font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
-    background-color: #ebebeb;
+    background-color: var(--main-light-gray);
     min-width: 360px;
 }
 
 
 header{
-    background-color: #fff159;
+    background-color: var(--main-yellow);
     color: rgb(40, 40, 40);
     
 }
@@ -108,7 +52,7 @@ header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
-    color: #666;
+    color: var(--main-dark-gray);
     padding: 2px;
 }
 
@@ -145,7 +89,7 @@ header .form .input{
     content: '';
     display: block;
     height: 26px;
-    border-left: 1px solid #e6e6e6;
+    border-left: 1px solid var(--main-light-gray);
 }
 .up-section__search button {
     align-items: center;
@@ -153,7 +97,7 @@ header .form .input{
     border: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    color: darkgray;
+    color: var(--main-dark-gray);
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
@@ -169,13 +113,13 @@ header .form .input{
 
 .down-section nav{
     display: none;
-    color: #666;
+    color: var(--main-dark-gray);
 }
 
 .hamburguer-menu i{
     border-radius: 5px;
     color: white;
-    background-color: #0044AA;
+    background-color: var(--main-light-blue);
     padding: 10px;
     cursor: pointer;
     text-align: center;
@@ -196,11 +140,11 @@ main {
 }
 
 main section article{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 10px var(--main-dark-gray);
 }
 
 .last-visit h2, .offers h2{
-    color: #666;
+    color: var(--main-dark-gray);
     font-size: 26px;
 }
 
@@ -220,6 +164,15 @@ main section h2{
     width: 100%;
 }
 
+.product img{
+    width: 100%;
+}
+
+.price,
+.discount{
+    width: 50%;
+}
+
 .product__info {
     border-top: 1px solid rgba(51,51,51,.1);
     color: rgb(51, 51, 51);
@@ -231,7 +184,7 @@ main section h2{
 
 .product__info i,
 .discount{
-    color: #39b54a;
+    color: var(--main-green);
 }
 
 .product__info i{
@@ -240,7 +193,7 @@ main section h2{
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid #39b54a;
+    border: 1px solid var(--main-green);
     background-color: #FFF;
     border-radius: 50%;
     position: absolute;
@@ -249,7 +202,7 @@ main section h2{
 }
 
 .product__info > h3 {
-    color: #666;
+    color: var(--main-dark-gray);
     font-size: 16px;
     margin-top: 30px;
 }
@@ -343,14 +296,30 @@ footer {
         margin-bottom: 15px;
         width: 47%;
     }
+
+    .footer-item:nth-child(2)::before,
+    .footer-item:nth-child(2)::after{
+        background-color: var(--main-light-gray);
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -32.5px;
+        position: absolute;
+        top: 50%;
+        width: 1px;
+    }
+    .footer-item:nth-child(2)::before{
+        left: 0;
+    }
+    .footer-item:nth-child(2)::after {
+        right: 0;
+    }
+
     .footer-item {
+        position: relative;
         width: 33%;
       }
 
-    /* .footer-item i{
-        display: block;
-        text-align: center;
-    } */
     .footer-item h2{
         margin-bottom: 30px;    
     }
