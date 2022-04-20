@@ -77,12 +77,17 @@ header .form .input{
     width: 50%;
 }
 
-.up-section__search input {
+.up-section__search input, .login-section input {
     border: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 10px;
     width: 100%;
+}
+
+.login-section input{
+    border: 1px solid lightgray;
+    border-radius: 0;
 }
 
 .up-section__search button::before{
@@ -139,7 +144,7 @@ main {
     margin-right: auto;
 }
 
-main section article{
+main section article:hover{
     box-shadow: 0px 0px 10px var(--main-dark-gray);
 }
 
@@ -218,6 +223,7 @@ main section h2{
 
 footer {
     background-color: #fff;
+    margin-top: 10px;
 }
 
 .footer-section{
@@ -258,6 +264,36 @@ footer {
     text-align: left;
     width: 90%;
   }
+
+  .login-section{
+      background-color: white;
+    box-shadow: 5px 5px 10px var(--main-dark-gray);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    width: 50%;
+  }
+  .login-section label {
+      display: block;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+  }
+
+.login-form-button{
+    background-color: var(--main-light-blue);
+    border: none;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    transition-timing-function: ease-in;
+    transition: background-color 2s;
+}
+.login-form-button:hover{
+    background-color: var(--main-blue);
+    cursor: pointer;
+}
 
 @media (min-width: 576px) {
 
